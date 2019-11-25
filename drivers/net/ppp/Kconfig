@@ -117,6 +117,13 @@ config PPPOATM
 	  which can lead to bad results if the ATM peer loses state and
 	  changes its encapsulation unilaterally.
 
+config PPP_BCP
+	tristate "PPP over Bridge"
+    depends on PPP && BRIDGE
+    ---help---
+      Support for PPP over Ethernet Bridge by using the
+      Bridge Control Protocol (BCP) as defined in RFC 3185.
+
 config PPPOE
 	tristate "PPP over Ethernet"
 	depends on PPP
